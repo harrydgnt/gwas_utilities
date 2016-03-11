@@ -46,16 +46,13 @@ argparse
 """
 parser = argparse.ArgumentParser()
 parser.add_argument("study_list", help="text file that contains studies, on each line")
-parser.add_argument("snp_list", help="list of snps across the studies") # FIX - THIS CAN BE INCORPORATED LATER
+praser.add_argument("outfile", help="the name of output text file for meta analysis")
 
 args = parser.parse_args()
 study_list = args.study_list
-snp_list = args.snp_list
-print study_list, snp_list
+outfile = args.outfile
+print study_list, outfile
 
-
-#FIX - ADD OUT FILE OPTION 
-outfile = 'test_out.txt'
 
 
 
@@ -104,6 +101,3 @@ outfile = open(outfile, 'w' )
 for key, value in final_dict.iteritems():
         outfile.write(str(key+"\t"+value+"\n"))
 outfile.close()
-
-
-
