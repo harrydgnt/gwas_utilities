@@ -107,25 +107,3 @@ outfile.close()
 
 
 
-
-# if __name__ == "__main__":
-#         f=open('./snp_list_five.txt','r')
-#         snp_list=[]
-#         for a in f:
-#                 snp_list.append(a[:-1])
-#         print len(snp_list)
-#         one_gwas=open('./AABC.gwas','r')
-#         one_snps=dict_add(one_gwas,snp_list)
-#         two_gwas=open('./latina_admix.gwas','r')
-#         two_snps=dict_add(two_gwas,snp_list)
-#         three_gwas=open('./MEC-copy.gwas','r')
-#         three_snps=dict_add(three_gwas,snp_list)
-#         four_gwas=open('./BPC3.gwas','r')
-#         four_snps=dict_add(four_gwas,snp_list)
-#         five_gwas=open('./CGEMS.gwas','r')
-#         five_snps=dict_add(five_gwas,snp_list)
-#         test_dict=merge_dicts(one_snps, two_snps, three_snps, four_snps, five_snps)
-#         outfile=open('./new_metasoft_input.txt','w')
-#         for key, value in test_dict.iteritems():
-#                 outfile.write(str(key+"\t"+value+"\n"))
-#         outfile.close
